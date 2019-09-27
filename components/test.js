@@ -2,16 +2,8 @@ import React from 'react';
 import { Text } from 'react-native';
 import { StyleSheet, FlatList, View, 
     TouchableHighlight,Image } from 'react-native';
-    const availableZipItems = [
-     { place: 'Hatyai', code: '90110' },
-     { place: 'Trang', code: '92000' },
-     { place: 'Chiangmai', code: '50000' },
-     { place: 'Khonkaen', code: '40000' },
-     { place: 'Chonburi', code: '20000' },
-    ]
     const ZipItem = ({place, code, navigate}) => (
         <TouchableHighlight onPress={() => navigate('cal')}>
-        
         </TouchableHighlight>
        )
     
@@ -25,9 +17,12 @@ import { StyleSheet, FlatList, View,
      render() {
      const { navigate } = this.props.navigation;
      return (
-        <View style={styles.zipItem}>
+        <View >
         <Image style={styles.Image}
         source={require('./assets/cylinder.png')} />
+        <Text>
+        ในทางเรขาคณิต ทรงกระบอก (อังกฤษ: cylinder) เป็นกราฟสามมิติที่เกิดจากสมการ ทรงกระบอกที่มีรัศมี r และความสูง h จะสามารถหาปริมาตรของทรงกระบอกหาได้จากสูตร และพื้นที่ผิวของทรงกระบอกหาได้จากสูตร
+        </Text>
     </View>
      );
      }
@@ -38,7 +33,7 @@ import { StyleSheet, FlatList, View,
            backgroundColor: '#82caaf', padding: '10%', marginTop: 20,
         },
         zipItem2: {
-            alignItems: 'center',  flexDirection: 'column', flex: 1,
+            alignItems: 'center', 
             
         },
         zipPlace: {
@@ -77,9 +72,12 @@ import { StyleSheet, FlatList, View,
         },
         Image :{
            
-            width: 150,
-            height: 150,
-            //alignItems: 'center'
+            //width: 150,
+          //  height: 150,
+            alignItems: 'center',
+            justifyContent: 'center',
+            resizeMode: "center"
+            //marginTop: 'center',
         }
     
     });
