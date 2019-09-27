@@ -76,7 +76,9 @@ import { StyleSheet, FlatList, View,
           //  height: 150,
             alignItems: 'center',
             justifyContent: 'center',
-            resizeMode: "center"
+            resizeMode: 'contain',
+            borderTopLeftRadius: 5,paddingTop: 10,
+            
             //marginTop: 'center',
         }
     

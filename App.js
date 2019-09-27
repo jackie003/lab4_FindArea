@@ -3,14 +3,13 @@ import {createStackNavigator } from 'react-navigation-stack';
 import {createAppContainer} from "react-navigation";
 import AreaCal from './components/AreaCal';
 import Areainformation from './components/Areainformation';
-import test from './components/test';
+import Areainfor from './components/Areainfor';
 const RootStack = createStackNavigator({
-  Cal: AreaCal,
-  Information: Areainformation,
-  test : test
+  AreaCal: AreaCal,
+  Areainfor : Areainfor
  },{
-  initialRouteName: 'Cal',
-  initialRouteParams: 'test'
+  initialRouteName: 'AreaCal',
+  initialRouteParams: 'Areainfor'
  })
  
  export default createAppContainer(RootStack);

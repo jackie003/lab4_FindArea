@@ -12,35 +12,25 @@ import {
 export default class App extends React.Component {
   state = {
     height: 0,
-    mass: 0,
+    redian: 0,
     resultNumber: 0,
     resultText: ""
   };
   static navigationOptions = ({navigation}) => {
     return {
-    headerTitle: (<Text>Information</Text>),
+    headerTitle: (<Text>Area Cylinder</Text>),
     headerRight: (
-    <Button title="Change" onPress={() => navigation.navigate('test')}
+    <Button title="Change" onPress={() => navigation.navigate('Areainfor')}
     />
     )
     }
    }
 
   handleCalculate = () => {
-    let imc = this.state.mass / (this.state.height * this.state.height );
+    let imc = 3.14 * (this.state.redian * this.state.redian) * this.state.height;
     this.setState({
       resultNumber: imc.toFixed(2)
     });
-
-    if (imc < 18.5) {
-      this.setState({ resultText: "Underweight" });
-    } else if (imc > 18.5 && imc < 25) {
-      this.setState({ resultText: "Normal Weight" });
-    } else if (imc >= 25 && imc < 30) {
-      this.setState({ resultText: "Overweight" });
-    } else {
-      this.setState({ resultText: "Obesity" });
-    }
   };
 
   render() {
@@ -59,7 +49,7 @@ export default class App extends React.Component {
               fontSize: 15
             }}
           >
-           Calculator
+           Area Cylinder
           </Text>
           <View style={styles.intro}>
             <TextInput
@@ -71,11 +61,11 @@ export default class App extends React.Component {
               }}
             />
             <TextInput
-              placeholder="Mass"
+              placeholder="Redian"
               keyboardType="numeric"
               style={styles.input}
-              onChangeText={mass => {
-                this.setState({ mass });
+              onChangeText={redian => {
+                this.setState({ redian });
               }}
             />
           </View>
@@ -87,8 +77,8 @@ export default class App extends React.Component {
             <Text style={styles.buttonText}>Calculate </Text>
           </TouchableOpacity>
           <Text style={styles.result}>{this.state.resultNumber}</Text>
-          <Text style={[styles.result, { fontSize: 35 }]}>
-            {this.state.resultText}
+          <Text style={[styles.result, { fontSize: 15 }]}>
+          Cubic centimeter
           </Text>
         </View>
       </ImageBackground>
