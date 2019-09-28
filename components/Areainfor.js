@@ -11,7 +11,7 @@ import { StyleSheet, FlatList, View,
     export default class WeatherScreen extends React.Component {
      static navigationOptions = ({navigation}) => {
      return {
-     headerTitle: (<Text style={{color:'orange',fontSize: 20, fontWeight: 'bold'}}>Choose a zip code</Text>),
+     headerTitle: (<Text style={{color:'orange',fontSize: 20, fontWeight: 'bold'}}>Information</Text>),
      }
      }
      render() {

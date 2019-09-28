@@ -20,7 +20,7 @@ export default class App extends React.Component {
     return {
     headerTitle: (<Text>Area Cylinder</Text>),
     headerRight: (
-    <Button title="Change" onPress={() => navigation.navigate('Areainfor')}
+    <Button title="Infor >" onPress={() => navigation.navigate('Areainfor')}
     />
     )
     }
